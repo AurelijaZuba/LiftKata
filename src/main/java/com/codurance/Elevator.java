@@ -1,7 +1,8 @@
 package com.codurance;
 
-import java.util.List;
+public class Elevator {
 
-public interface Elevator {
-    List<Integer> floor(int[][] currentFloor);
+    public void floor(int[][] currentFloor) {
+        throw new UnsupportedOperationException();
+    }
 }

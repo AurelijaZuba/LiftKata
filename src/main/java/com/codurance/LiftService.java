@@ -1,15 +1,18 @@
 package com.codurance;
 
 public class LiftService {
-    private LiftStops liftMock;
+
+    private LiftStops lift;
     private Elevator elevator;
 
-    public LiftService(LiftStops liftMock, Elevator elevator) {
-        this.liftMock = liftMock;
+    public LiftService(LiftStops lift, Elevator elevator) {
+        this.lift = lift;
         this.elevator = elevator;
     }
 
-    public void elevator(int[][] queue, int capacity) {
+    public void lift(int[][] queue, int capacity) {
         elevator.floor(queue);
     }
 }
+
+

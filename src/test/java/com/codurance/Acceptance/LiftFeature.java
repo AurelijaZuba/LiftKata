@@ -32,7 +32,7 @@ public class LiftFeature {
 
 
         LiftService liftService = new LiftService(liftMock, elevator);
-        liftService.elevator(queue, capacity);
+        liftService.lift(queue, capacity);
 
 
         verify(liftMock).liftStops("  /----------------|  |----------------\\");

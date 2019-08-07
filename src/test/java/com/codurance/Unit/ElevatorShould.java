@@ -12,16 +12,15 @@ public class ElevatorShould {
 
     @Test
     void start_on_the_ground_floor() {
-        int[][] expectedFloor = { new int[0] };
         int[][] queue = { new int[0] };
         int capacity = 0;
 
         LiftStops liftMock = mock(LiftStops.class);
-        Elevator elevator = mock(Elevator.class);
+        Elevator elevatorMock = mock(Elevator.class);
 
-        LiftService liftService = new LiftService(liftMock, elevator);
-        liftService.elevator(queue, capacity);
+        LiftService liftService = new LiftService(liftMock, elevatorMock);
+        liftService.lift(queue, capacity);
 
-        verify(elevator).floor(expectedFloor);
+        verify(elevatorMock).floor(queue);
     }
 }
