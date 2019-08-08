@@ -1,20 +1,19 @@
 package com.codurance;
 
-import static java.util.Arrays.asList;
-
 public class LiftService {
-    private LiftConsole liftConsole;
+    private LiftLog log;
 
-    public LiftService(LiftConsole liftConsole) {
-
-        this.liftConsole = liftConsole;
+    public LiftService(LiftLog log, LiftCarriage liftCarriageMock) {
+        this.log = log;
     }
 
-    public void lift(int[][] queue) {
-        liftConsole.record(queue);
+    public void call(int currentFloor) {
+
+        throw new UnsupportedOperationException();
     }
 
-    public int[] currentFloor(int[][] groundFloor) {
+    public void move(int floorNumber) {
+
         throw new UnsupportedOperationException();
     }
 }
