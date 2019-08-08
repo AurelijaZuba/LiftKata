@@ -1,18 +1,14 @@
 package com.codurance;
 
 public class LiftService {
+    private LiftConsole liftConsole;
 
-    private LiftStops lift;
-    private Elevator elevator;
+    public LiftService(LiftConsole liftConsole) {
 
-    public LiftService(LiftStops lift, Elevator elevator) {
-        this.lift = lift;
-        this.elevator = elevator;
+        this.liftConsole = liftConsole;
     }
 
-    public void lift(int[][] queue, int capacity) {
-        elevator.floor(queue);
+    public void lift(int[][] queue) {
+        throw new UnsupportedOperationException();
     }
 }
-
-
