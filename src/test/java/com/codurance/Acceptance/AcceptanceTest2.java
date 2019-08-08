@@ -23,9 +23,11 @@ public class AcceptanceTest2 {
         int currentFloor = 0;
         int floorNumber = 3;
         LiftLog logMock = mock(LiftLog.class);
-        LiftCarriage liftCarriage = new LiftCarriage(liftService);
 
-        LiftService liftService = new LiftService(logMock, liftCarriage);
+        LiftService liftService = new LiftService(logMock);
+        LiftCarriage liftCarriage = new LiftCarriage(liftService, "LiftCarriage");
+        liftService.register(liftCarriage);
+
         liftService.call(currentFloor);
         liftService.move(floorNumber);
 

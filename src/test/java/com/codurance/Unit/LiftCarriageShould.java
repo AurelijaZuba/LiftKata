@@ -14,7 +14,7 @@ public class LiftCarriageShould {
         int floorNumber = 0;
         LiftService liftServiceMock = mock(LiftService.class);
 
-        LiftCarriage liftCarriage = new LiftCarriage(liftServiceMock);
+        LiftCarriage liftCarriage = new LiftCarriage(liftServiceMock, "LiftCarriage");
         liftCarriage.command(floorNumber);
 
         verify(liftServiceMock).notify("Lift moving");
