@@ -2,14 +2,16 @@ package com.codurance;
 
 public class LiftService {
     private LiftLog log;
+    private LiftCarriage liftCarriage;
 
-    public LiftService(LiftLog log, LiftCarriage liftCarriageMock) {
+    public LiftService(LiftLog log, LiftCarriage liftCarriage) {
         this.log = log;
+        this.liftCarriage = liftCarriage;
     }
 
-    public void call(int currentFloor) {
+    public void call(int floorNumber) {
 
-        throw new UnsupportedOperationException();
+        liftCarriage.command(floorNumber);
     }
 
     public void move(int floorNumber) {
