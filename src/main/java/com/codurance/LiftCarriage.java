@@ -10,7 +10,8 @@ public class LiftCarriage implements LiftComponent{
     }
 
     public void command(int floorNumber) {
-        throw new UnsupportedOperationException();
+            liftService.notify("Lift moving");
+            liftService.notify("Lift stopping");
     }
 
     @Override
