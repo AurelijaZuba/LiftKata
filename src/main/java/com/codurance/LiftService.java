@@ -1,5 +1,7 @@
 package com.codurance;
 
+import static java.util.Arrays.asList;
+
 public class LiftService {
     private LiftConsole liftConsole;
 
@@ -9,6 +11,10 @@ public class LiftService {
     }
 
     public void lift(int[][] queue) {
+        liftConsole.record(queue);
+    }
+
+    public int[] currentFloor(int[][] groundFloor) {
         throw new UnsupportedOperationException();
     }
 }

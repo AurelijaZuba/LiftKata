@@ -1,37 +1,23 @@
 package com.codurance.Unit;
 
+import com.codurance.LiftConsole;
+import com.codurance.LiftService;
 import org.junit.jupiter.api.Test;
 
+import static org.assertj.core.api.Java6Assertions.assertThat;
 import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.verify;
 
 public class LiftShould {
 
-//    @Test
-//    void start_on_the_ground_floor() {
-//        int[][] queue = { new int[0] };
-//
-//        LiftStops liftMock = mock(LiftStops.class);
-//        Elevator elevatorMock = mock(Elevator.class);
-//
-//        LiftService liftService = new LiftService(liftMock, elevatorMock);
-//        liftService.lift(queue);
-//
-//        verify(elevatorMock).floor(queue);
-//    }
+    @Test
+    void start_on_the_ground_floor() {
+        int[][] groundFloor = { new int[0] };
 
-//    @Test
-//    void take_one_person_from_ground_floor_to_first_floor() {
-//        int[][] queue = { new int[]{1} };
-//        int capacity = 1;
-//
-//        LiftStops liftMock = mock(LiftStops.class);
-//        Elevator elevatorMock = mock(Elevator.class);
-//
-//        LiftService liftService = new LiftService(liftMock, elevatorMock);
-//        liftService.lift(queue, capacity);
-//
-//        verify(elevatorMock).floor(queue);
-//    }
+        LiftConsole liftConsoleMock = mock(LiftConsole.class);
 
+        LiftService liftService = new LiftService(liftConsoleMock);
+        liftService.lift(groundFloor);
+
+        assertThat(liftService.currentFloor(groundFloor)).isEqualTo(new int[0]);
+    }
 }
