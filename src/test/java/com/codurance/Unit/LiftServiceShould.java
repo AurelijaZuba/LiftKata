@@ -21,4 +21,7 @@ public class LiftServiceShould {
 
         verify(liftCarriageMock).command(groundFloor);
     }
+
+
+
 }

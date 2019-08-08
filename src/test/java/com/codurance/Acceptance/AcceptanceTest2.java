@@ -23,7 +23,7 @@ public class AcceptanceTest2 {
         int currentFloor = 0;
         int floorNumber = 3;
         LiftLog logMock = mock(LiftLog.class);
-        LiftCarriage liftCarriage = new LiftCarriage();
+        LiftCarriage liftCarriage = new LiftCarriage(liftService);
 
         LiftService liftService = new LiftService(logMock, liftCarriage);
         liftService.call(currentFloor);
@@ -38,4 +38,6 @@ public class AcceptanceTest2 {
         verify(logMock).logger("Doors opening");
         verify(logMock).logger("Doors closing");
     }
+
+
 }

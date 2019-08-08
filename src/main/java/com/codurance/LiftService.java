@@ -1,5 +1,7 @@
 package com.codurance;
 
+import java.util.HashMap;
+
 public class LiftService {
     private LiftLog log;
     private LiftCarriage liftCarriage;
@@ -10,12 +12,19 @@ public class LiftService {
     }
 
     public void call(int floorNumber) {
-
         liftCarriage.command(floorNumber);
     }
 
     public void move(int floorNumber) {
 
         throw new UnsupportedOperationException();
+    }
+
+    public void notify(String message) {
+        throw new UnsupportedOperationException();
+    }
+
+    public void register(LiftComponent liftComponent){
+
     }
 }
